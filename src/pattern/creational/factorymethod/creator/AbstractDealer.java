@@ -1,21 +1,18 @@
 package pattern.creational.factorymethod.creator;
 
-import pattern.creational.factorymethod.product.Motorcycle;
-import pattern.creational.factorymethod.product.Shogun;
-import pattern.creational.factorymethod.product.Vario;
-import pattern.creational.factorymethod.product.Vixion;
+import pattern.creational.factorymethod.product.*;
 
 public abstract class AbstractDealer {
-    public Motorcycle buildMotorcycle(String type) {
+    public Motorcycle buildMotorcycle(MotorcycleType type) {
         Motorcycle motorcycle;
         switch (type) {
-            case "Vixion":
+            case MotorcycleType.VIXION:
                 motorcycle = new Vixion();
                 break;
-            case "Vario":
+            case MotorcycleType.VARIO:
                 motorcycle = new Vario();
                 break;
-            case "Shogun":
+            case MotorcycleType.SHOGUN:
                 motorcycle = new Shogun();
                 break;
             default:
@@ -24,5 +21,5 @@ public abstract class AbstractDealer {
         return motorcycle;
     }
 
-    public abstract  Motorcycle orderMotorcycle(String type);
+    public abstract  Motorcycle orderMotorcycle(MotorcycleType type);
 }
