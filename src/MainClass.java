@@ -1,3 +1,5 @@
+import pattern.creational.abstractfactory.factories.GuiFactory;
+import pattern.creational.abstractfactory.products.OsType;
 import pattern.creational.factorymethod.creator.DealerPurbalingga;
 import pattern.creational.factorymethod.creator.DealerYogyakarta;
 import pattern.creational.factorymethod.product.Motorcycle;
@@ -32,6 +34,24 @@ public class MainClass {
 
         System.out.println("==============================================================");
         System.out.println("=================== End Of Factory Method ====================");
+        System.out.println("==============================================================");
+        System.out.println();
+        System.out.println();
+
+        System.out.println("==============================================================");
+        System.out.println("============ Abstract Factory (Creational Pattern)============");
+        System.out.println("==============================================================");
+
+        GuiFactory linuxFactory = GuiFactory.getFactory(OsType.LINUX);
+        GuiFactory windowsFactory = GuiFactory.getFactory(OsType.WINDOWS);
+
+        linuxFactory.createButton().paint();
+        linuxFactory.createCheckbox().paint();
+        windowsFactory.createButton().paint();
+        windowsFactory.createCheckbox().paint();
+
+        System.out.println("==============================================================");
+        System.out.println("================== End Of Abstract Factory ===================");
         System.out.println("==============================================================");
         System.out.println();
         System.out.println();
