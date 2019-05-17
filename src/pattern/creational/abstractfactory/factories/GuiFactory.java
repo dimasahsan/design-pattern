@@ -6,7 +6,7 @@ import pattern.creational.abstractfactory.products.Checkbox;
 
 public abstract class GuiFactory {
 
-    static GuiFactory getFactory(OsType type) {
+    public static GuiFactory getFactory(OsType type) {
         GuiFactory factory;
         switch (type) {
             case LINUX:
@@ -21,7 +21,7 @@ public abstract class GuiFactory {
         return factory;
     }
 
-    abstract Button createButton();
+    public abstract Button createButton();
 
-    abstract Checkbox createCheckbox();
+    public abstract Checkbox createCheckbox();
 }
