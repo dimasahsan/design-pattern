@@ -6,13 +6,13 @@ import pattern.creational.abstractfactory.products.Checkbox;
 
 public abstract class GuiFactory {
 
-    static GuiFactory getFactory(String type) {
+    static GuiFactory getFactory(OsType type) {
         GuiFactory factory;
         switch (type) {
-            case "Linux":
+            case LINUX:
                 factory = new LinuxFactory();
                 break;
-            case "Windows":
+            case WINDOWS:
                 factory = new WindowsFactory();
                 break;
             default:
