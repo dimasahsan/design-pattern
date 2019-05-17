@@ -6,13 +6,13 @@ public abstract class AbstractDealer {
     public Motorcycle buildMotorcycle(MotorcycleType type) {
         Motorcycle motorcycle;
         switch (type) {
-            case MotorcycleType.VIXION:
+            case VIXION:
                 motorcycle = new Vixion();
                 break;
-            case MotorcycleType.VARIO:
+            case VARIO:
                 motorcycle = new Vario();
                 break;
-            case MotorcycleType.SHOGUN:
+            case SHOGUN:
                 motorcycle = new Shogun();
                 break;
             default:
