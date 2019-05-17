@@ -5,7 +5,7 @@ import pattern.creational.abstractfactory.products.Checkbox;
 import pattern.creational.abstractfactory.products.WindowsButton;
 import pattern.creational.abstractfactory.products.WindowsCheckbox;
 
-public class WindowsFactory implements GuiFactory {
+public class WindowsFactory extends GuiFactory {
     @Override
     public Button createButton() {
         return new WindowsButton();

@@ -5,7 +5,7 @@ import pattern.creational.abstractfactory.products.Checkbox;
 import pattern.creational.abstractfactory.products.LinuxButton;
 import pattern.creational.abstractfactory.products.LinuxCheckbox;
 
-public class LinuxFactory implements GuiFactory {
+public class LinuxFactory extends GuiFactory {
     @Override
     public Button createButton() {
         return new LinuxButton();
