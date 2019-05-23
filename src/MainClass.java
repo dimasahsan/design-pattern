@@ -1,5 +1,6 @@
 import pattern.creational.abstractfactory.factories.GuiFactory;
 import pattern.creational.abstractfactory.products.OsType;
+import pattern.creational.builder.House;
 import pattern.creational.factorymethod.creator.DealerPurbalingga;
 import pattern.creational.factorymethod.creator.DealerYogyakarta;
 import pattern.creational.factorymethod.product.Motorcycle;
@@ -132,6 +133,24 @@ public class MainClass {
 
         System.out.println("==============================================================");
         System.out.println("===================== End Of Prototype ======================");
+        System.out.println("==============================================================");
+        System.out.println();
+        System.out.println();
+
+        System.out.println("==============================================================");
+        System.out.println("================ Builder (Creational Pattern)================");
+        System.out.println("==============================================================");
+
+        House house = new House.HouseBuilder()
+                .setLivingRoom(1)
+                .setBedroom(7)
+                .setBathroom(3)
+                .setKitchen(1)
+                .build();
+        System.out.println(house.toString());
+
+        System.out.println("==============================================================");
+        System.out.println("================== End Of Abstract Factory ===================");
         System.out.println("==============================================================");
         System.out.println();
         System.out.println();
